@@ -1,0 +1,13 @@
+<script>
+    $(function() {
+        var calendar = $.calendars.instance('ummalqura');
+        $('#popupDatePicker').calendarsPicker({calendar: calendar, onSelect: showDate});
+        $('#popupDatePicker').calendarsPicker('option', {dateFormat: 'yyyy/dd/mm'});
+    });
+
+    function showDate(date) {
+        alert('The date chosen is ' + date);
+    }
+</script>
+
+<p>Pick date <input type="text" id="popupDatePicker" class="is-calendarPicker" /></p>
