@@ -11,12 +11,12 @@ For more information about the core jquery library, visit: http://keith-wood.nam
 <br>
 <br>
 # Project structure
-*Index.html* is a representation of html page that could contain the calendar picker. It has different implementations for demo purposes only. <br>
-*server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to use nodejs,  check *How to test it* section. <br>
-*js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing different languages, you could remove unwanted files. You could also replace it by any other language or calendar to be supported.
+1. *Index.html* is a representation of html page that could contain the calendar picker. It has different implementations for demo purposes only. <br>
+2. *server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to use nodejs,  check *How to test it* section. <br>
+3. *js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing different languages, you could remove unwanted files. You could also replace it by any other language or calendar to be supported.
 Refer back to http://keith-wood.name/calendarsPicker.html for more information. <br>
-*css folder* contains the css files to update library styles.
-*datepicker folder* has the custom directive developed by me to be able to use the library in angular project.
+4. *css folder* contains the css files to update library styles.
+5. *datepicker folder* has the custom directive developed by me to be able to use the library in angular project.
 <br> 
 <br>
 # How to test it
