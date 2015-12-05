@@ -26,10 +26,11 @@
         <div ng-controller="mainController">
             <p>{{greeting}}</p>
             <p>Arabic and Umm alqura</p>
-            <input type="text" id="popupDatePicker" class="is-calendarPicker" ng-model="date1" 
+            <input type="text" id="popupDatePicker" class="is-calendarPicker" ng-model='date1' 
                    calendarType="ummalqura"
                    language="ar"
                    dateFormat="yyyy/mm/dd"
+                   showOnFocus = "true"
                    kdatepicker />
             <br>
             <p>English and Umm alqura</p>
@@ -37,6 +38,7 @@
                    calendarType="ummalqura"
                    language="en"
                    dateFormat="yyyy/mm/dd"
+                   showOnFocus = "true"
                    kdatepicker />
             <br>
             <p>Arabic and Gregorian</p>
@@ -44,6 +46,7 @@
                    calendarType="gregorian"
                    language="ar"
                    dateFormat="yyyy/mm/dd"
+                   showOnFocus = "true"
                    kdatepicker />
             <br>
             <p>Arabic Egypt and Gregorian</p>
@@ -51,6 +54,8 @@
                    calendarType="gregorian"
                    language="ar-EG"
                    dateFormat="yyyy/mm/dd"
+                   showOnFocus = "false"
+                   btntriggertext = "تحديد"
                    kdatepicker />
             <br>
             <p>English and Gregorian</p>
@@ -58,6 +63,8 @@
                    calendarType="gregorian"
                    language="en"
                    dateFormat="yyyy/mm/dd"
+                   showOnFocus = "false"
+                   btntriggertext = 'Select'
                    kdatepicker />
         </div>
      </body>
