@@ -12,11 +12,10 @@ For more information about the core jquery library, visit: http://keith-wood.nam
 <br>
 # Project structure
 1. *Index.html* is a representation of html page that could contain the calendar picker. It has different implementations for demo purposes only. <br>
-2. *server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to use nodejs,  check *How to test it* section. <br>
-3. *js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing different languages, you could remove unwanted files. You could also replace it by any other language or calendar to be supported.
-Refer back to http://keith-wood.name/calendarsPicker.html for more information. <br>
-4. *css folder* contains the css files to update library styles.
-5. *datepicker folder* has the custom directive developed by me to be able to use the library in angular project.
+2. *server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to start and test,  check *How to test it* section. <br>
+3. *js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing different languages, you could remove unwanted files. You could also replace/add dependancies as per your need to support new cultures. Refer back to http://keith-wood.name/calendarsPicker.html for more information. It also contains 'module.js' that has the initialization of angular app for demo purposes and you'll not need it you your project.<br>
+4. *css folder* contains the css files to update library styles. Feel free to change it as per your need.<br>
+5. *datepicker folder* has the custom directive developed by me to be able to use the library in angular project. You'll need to change "angular.module('app')" to match destination project's module.
 <br> 
 <br>
 
