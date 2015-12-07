@@ -18,6 +18,7 @@
         
         <script type="text/javascript" src="js/module.js"></script>
         <script type="text/javascript" src="datepicker/kdatepicker.js"></script>
+        <script type="text/javascript" src="datepicker/kdatepicker.filter.js"></script>
         
         <link rel="stylesheet" type="text/css" href="css/jquery.calendars.picker.css"> 
     </head>
@@ -25,6 +26,7 @@
     <body ng-app="app">
         <div ng-controller="mainController">
             <p>{{greeting}}</p>
+            <span>{{date1 | kdate}}</span> <!-- This filter is still in development mode -->
             <p>Arabic and Umm alqura</p>
             <input type="text" id="popupDatePicker" class="is-calendarPicker" ng-model='date1' 
                    calendarType="ummalqura"
