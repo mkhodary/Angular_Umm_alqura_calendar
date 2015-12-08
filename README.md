@@ -28,7 +28,7 @@ For more information about the core jquery library, visit: http://keith-wood.nam
 <br> 
 <br>
 
-# How Include kdate on your project
+# How to include kdate on your project
 
 1. Add required dependencies on the same order as in index.html. Dependancies include js files and css file.
 2. Include kdate in your main angular module.
