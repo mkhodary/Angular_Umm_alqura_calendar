@@ -2,10 +2,9 @@
 (function () {
     'use strict';
 
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['kdate']);
 
     app.controller('mainController', ['$scope', function ($scope) {
-        $scope.greeting = 'welcome!';
         $scope.date1 = new Date();
         $scope.date2;
         $scope.date3;

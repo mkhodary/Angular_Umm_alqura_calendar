@@ -7,7 +7,7 @@
 (function () {
     'use strict';
 
-    angular.module('app')
+    angular.module('kdate')
 
     .directive('kdatepicker', function () {
         return {
@@ -23,6 +23,10 @@
                     var showOnFocus = attrs.showonfocus === 'true';
                     var btnText = attrs.btntriggertext ? attrs.btntriggertext : '*';
                     var dateResult = null;
+
+                    ngModel.$formatters.push(function (value) {
+                        return $filter('kdate')(value, dateFormat);
+                    });
 
                     if (ngModel.$modelValue) {
 
@@ -54,7 +58,25 @@
                         $.calendarsPicker.regionalOptions[language], {
                             onSelect: function (date) {
                                 scope.$apply(function () {
-                                    ngModel.$setViewValue(new Date(date));
+                                    date = new Date(date);
+                                    var result;
+                                    if (calendarType === "ummalqura") {
+                                        var jdate = $.calendars.instance("ummalqura").newDate(
+                                            parseInt(date.getFullYear(), 10),
+                                            parseInt(date.getMonth() + 1, 10),
+                                            parseInt(date.getDate(), 10)).toJD();
+
+                                        // Get date result that will be dispalyed.
+                                        var dateResult = $.calendars.instance().fromJD(jdate);
+                                        result = new Date(dateResult);
+                                        result.setHours(date.getHours());
+                                        result.setMinutes(date.getMinutes());
+                                        result.setSeconds(date.getSeconds());
+                                        result.setMilliseconds(date.getMilliseconds());
+                                    } else {
+                                        result = date;
+                                    }
+                                    ngModel.$setViewValue(result);
                                 });
                             }
                         }));

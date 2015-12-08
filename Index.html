@@ -16,18 +16,27 @@
         <script type="text/javascript" src="js/jquery.calendars.plus.min.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
         
-        <script type="text/javascript" src="js/module.js"></script>
-        <script type="text/javascript" src="datepicker/kdatepicker.js"></script>
-        <script type="text/javascript" src="datepicker/kdatepicker.filter.js"></script>
+        <script type="application/javascript" src="kdate/kdate.module.js"></script>
+        <script type="text/javascript" src="kdate/kdate.filter.js"></script>
+        <script type="text/javascript" src="kdate/kdate.picker.js"></script>
+        <script type="text/javascript" src="app.module.js"></script>
         
         <link rel="stylesheet" type="text/css" href="css/jquery.calendars.picker.css"> 
     </head>
     
     <body ng-app="app">
         <div ng-controller="mainController">
-            <p>{{greeting}}</p>
-            <span>{{date1 | kdate}}</span> <!-- This filter is still in development mode -->
-            <p>Arabic and Umm alqura</p>
+            <h1>Date Display</h1>
+            <span> Filter in Gregorian calendar will work as date filter</span>
+            <span><B>{{date1 | kdate}}</B></span>
+            <br>
+            <span> Filter in Umm Al-Qura calendar</span>
+            <span><B>{{date1 | kdate: '' : 'ar' : 'ummalqura'}}</B></span>
+            <br>
+            <span> Filter in Umm Al-Qura calendar to show day of week</span>
+            <span><B>{{date1 | kdate: 'EEEE' : 'ar' : 'ummalqura'}}</B></span>
+            <h1>Date Picker</h1>
+            <p>Arabic and Umm alqura, will affect the date displayed above</p>
             <input type="text" id="popupDatePicker" class="is-calendarPicker" ng-model='date1' 
                    calendarType="ummalqura"
                    language="ar"
