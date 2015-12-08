@@ -59,6 +59,12 @@
                             onSelect: function (date) {
                                 scope.$apply(function () {
                                     date = new Date(date);
+                                    // If invalid date return, it is important in case of clear button is selected
+                                    // In this case also, model has to be updated.
+                                    if (isNaN(date.getTime())){
+                                        ngModel.$setViewValue('');
+                                        return;
+                                    }
                                     var result;
                                     if (calendarType === "ummalqura") {
                                         var jdate = $.calendars.instance("ummalqura").newDate(
