@@ -1,9 +1,9 @@
-# Angular Directive Calendar including Umm Al Qura and Gregorian Calendar
+# kdate Angular Directive and Filter for Umm Al Qura and Gregorian Calendar
 <br>
 Angular Directive is developed by **"Mohamed Elkhodary"** and is available for use as in *Terms of Use* section.
 <br>
 <br>
-It provides date picker for "Gregorian" calendar and "Umm alqura calendar" in two languages: english and Arabic (Arabic and Arabic/Egypt).
+It provides date picker and date display "Angular filter" for "Gregorian" calendar and "Umm alqura calendar" in two languages: english and Arabic (Arabic and Arabic/Egypt).
 <br>
 This sample is built on http://keith-wood.name/calendarsPicker.html by including an angular directive that works as a wrapper on top of keith-wood jquery library.
 <br>
@@ -12,10 +12,11 @@ For more information about the core jquery library, visit: http://keith-wood.nam
 <br>
 # Project structure
 1. *Index.html* is a representation of html page that could contain the calendar picker. It has different implementations for demo purposes only. <br>
-2. *server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to start and test,  check *How to test it* section. <br>
-3. *js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing different languages, you could remove unwanted files. You could also replace/add dependancies as per your need to support new cultures. Refer back to http://keith-wood.name/calendarsPicker.html for more information. It also contains 'module.js' that has the initialization of angular app for demo purposes and you'll not need it you your project.<br>
-4. *css folder* contains the css files to update library styles. Feel free to change it as per your need.<br>
-5. *datepicker folder* has the custom directive developed by me to be able to use the library in angular project. You'll need to change "angular.module('app')" to match destination project's module.
+2. *app.module.js* representing existing angular application that you need to include the kdate to it.
+3. *server.js & folder node_modules* are used to be able to run nodejs server to test it. For more information regarding how to start and test,  check *How to test it* section. <br>
+3. *js folder* includes all required javascript files that could be used by keith-wood jquery library. If you're not implementing Arabic language, you could remove language-specific javascript files. You could also replace/add language javascript as dependancies as per your need to support new cultures. Refer back to http://keith-wood.name/calendarsPicker.html for more information.<br>
+4. *css folder* contains the css files to update library styles. Feel free to change it to match destination application look and feel.<br>
+5. *kdate folder* has the custom module, directive and filter developed by me.
 <br> 
 <br>
 
@@ -23,6 +24,15 @@ For more information about the core jquery library, visit: http://keith-wood.nam
 
 1. Make sure that nodejs is installed.<br>
 2. Clone the repository then run "node server.js" and you can check it then on http://localhost:8080/
+3. You'll find different implementations of both calendar and filter. Feel free to contact me if you need any support.
+<br> 
+<br>
+
+# How Include kdate on your project
+
+1. Add required dependencies on the same order as in index.html. Dependancies include js files and css file.
+2. Include kdate in your main angular module.
+3. Add all files in kdate folder.
 <br> 
 <br>
 
